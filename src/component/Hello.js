@@ -1,10 +1,20 @@
 import { connect } from 'react-redux';
 import { hello,hello1 } from '../reducers/asyncReducerA';
-import React from "react";
+import React,{useRef}from "react";
 
 const Hello = (props)=>{
-    console.log(props);
-    return  <div>222</div>
+    console.log(props.name);
+    const inputRef= useRef(null);
+    const helloName = ()=>{
+        props.hello(inputRef.current.value);
+    }
+    return<><div>
+    <input ref={inputRef} type={"text"} size="medium" width={20}></input>
+    <button onClick={helloName}>bean2</button>
+    <button onClick={props.async.hello1}>Jimmy11</button>
+    </div>
+      <div>hello1 {props.async.name}</div></>
+
 }
 
 

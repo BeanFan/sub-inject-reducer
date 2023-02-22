@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const asyncReducerA = createSlice({
-    name:"counterSliceA",
+    name:"asyncReducerA", //for actionName
     initialState:{name:""},
     reducers:{
         hello(state,action){
-            return {name:"Bean"};
+            return {name:action.payload};
         },
         hello1(state,action){
             return {name:"Jimmy"};

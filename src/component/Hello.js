@@ -1,16 +1,22 @@
 import { connect } from 'react-redux';
-import { actions } from '../reducers/asyncReducerA';
+import { hello,hello1 } from '../reducers/asyncReducerA';
 import React from "react";
-function Hello(props={}){
-    return   <div>hello {props.name}</div>
+
+const Hello = (props)=>{
+    console.log(props);
+    return  <div>222</div>
 }
 
 
-const mapStateToProps = (state){
+const mapStateToProps = (state)=>{
     return state;
+    
 }
 
 
-const mapAction = actions;
+const actionCreators = {
+    hello,
+    hello1
+}
 
-export default connect(mapStateToProps,mapActions)(Hello);
+export default connect(mapStateToProps,actionCreators)(Hello);

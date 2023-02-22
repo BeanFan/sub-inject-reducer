@@ -5,12 +5,22 @@ const asyncReducerA = createSlice({
     initialState:{name:""},
     reducers:{
         hello(state,action){
-            return {name:action.payload};
+            return {name:"Bean"};
+        },
+        hello1(state,action){
+            return {name:"Jimmy"};
         }
     }
 });
 
-export  {actions,reducer};
+
+
+
+const  {actions,reducer} = asyncReducerA;
+
+export const {hello,hello1} = actions;
+export default  reducer;
+
 
 
 

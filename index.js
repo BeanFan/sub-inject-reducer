@@ -2,13 +2,12 @@ import React from "react";
 
 
 const HelloSynce = function(injectReducer){
-    return React.lazy( ()=>import("./src/component/Hello").then((module)=>{     
-            const reducer = require("./src/reducers/asyncReducerA");
-            injectReducer("async", reducer.default);
-            return module;
-        })
-    )
-} 
+    const Hello = require("./src/component/Hello");
+    const reducer = require("./src/reducers/asyncReducerA");
+    injectReducer("async", reducer.default);
+    return Hello;
+}
+    
 
 export default HelloSynce;
  

@@ -11,7 +11,11 @@ const Hello = (props)=>{
     return<><div>
     <input ref={inputRef} type={"text"} size="medium" width={20}></input>
     <button onClick={helloName}>bean2</button>
-    <button onClick={()=>props.hello1(Math.random())}>Jimmy11</button>
+    <button onClick={()=>{props.hello1()}}>JImmy</button>
+    
+    {/* don not use below way, it we get error , caused by unexpected paylaod sent to action
+    <button onClick={props.hello1()}>Jimmy12222221</button> */}
+    
     </div>
       <div>hello1 {props.async.name}</div></>
 

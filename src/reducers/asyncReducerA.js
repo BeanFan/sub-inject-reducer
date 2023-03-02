@@ -8,7 +8,7 @@ const asyncReducerA = createSlice({
             return {name:action.payload};
         },
         hello1(state,action){
-            return {name:state.name.concat(action.payload).concat("\n")}
+            return {name:"231321"}
         }
     }
 });
